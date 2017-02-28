@@ -1,4 +1,4 @@
-# nitro-part-template
+# nitro-template
 
 
 
