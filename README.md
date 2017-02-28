@@ -1,10 +1,11 @@
-# nitro-template
+# Nitro Part Template
 
+Pattern for constructing new Nitro Parts for library assembly.
 
-
+## General Structure
 ```
 +---+                          +
-+[ ]+ COMPONENT_ROOT           |
++[ ]+ PART_ROOT                |
   +                            |
   |                            |
   +------>[] bin               |   bin = component specific executable utility files
@@ -36,6 +37,4 @@
 
 ```
 
-<pre>
-test
-</pre>
+
