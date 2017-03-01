@@ -4,6 +4,7 @@ Pattern for constructing new Nitro Parts for library assembly.
 
 ## General Structure
 ```
+
 +----------------------------------------------+
 |                                              |
 |                                              |
@@ -18,22 +19,40 @@ Pattern for constructing new Nitro Parts for library assembly.
 |      |        |                              |
 |      |        +------>[ ] lib                |   src/impl   = implementations supported by this componen
 |      |        |                              |
-|      |        +------>[ ] res                |   build.json = config for building implementation version
+|      |        +------>[ ] tag                |   build.json = config for building implementation version
 |      |        |                              |
 |      |        +------>[+] impl               |   part.json  = part definition config for Nitro assembly
 |      |                 |                     |
-|      |                 +--->[+]<name>        |
-|      |                       |               |   Generated Files
-|      |                       +-->build.json  |
-|      +------>[ ] part.json                   |   dist       = generated distrib file, assembled part tha
-|      |                                       |                can be deployed in a ui sandbox, to larger
-|      +------>[G] .nitro                      |                deployed library or to test suite
+|      |                 +--->[+]<name>        |   impl/test  = all unit tests for specific implementation
+|      |                 |     |               |
+|      |                 |     +-->build.json  |   t/index.js = main test file (for running all tests)
+|      |                 |                     |
+|      |                 +--->[+]test          |
+|      |                       |               |   res/zero   = default skin for component - structure only
+|      |                       +-->index.js    |                no style features
 |      |                                       |
-|      +------>[G] dist                        |   .nitro     = generated partid & semvar number
+|      +------>[+] res                         |   res/<name> = specific style features based on a particular
+|      |        |                              |                theme.
+|      |        +------>[+] zero               |
+|      |        |        |                     |   test       = top-level tests for integration testing
+|      |        |        +-->mytag.zero.css    |
+|      |        |                              |
+|      |        +------>[+] <skin>             |   Generated Files
+|      |                 |                     |
+|      |                 +-->mytag.<skin>.css  |   dist       = generated dirst dir gets assembled parts that
+|      |                                       |                can be deployed in a ui sandbox, to larger
+|      |                                       |                deployed library or to test suite
+|      |                                       |
+|      +------>[ ] part.json                   |   .nitro     = generated partid & semvar number
+|      |                                       |
+|      +------>[G] .nitro                      |
+|      |                                       |
+|      +------>[G] dist                        |
 |                                              |
 |                                              |
 |                                              |
 +----------------------------------------------+
+
 
 ```
 
