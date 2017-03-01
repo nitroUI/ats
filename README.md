@@ -1,4 +1,4 @@
-# Nitro Part Template
+# Nitro Parts Template
 
 Pattern for constructing new Nitro Parts for library assembly.
 
