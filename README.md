@@ -1,6 +1,6 @@
-# Nitro Tag Definition Spec
+# Nitro Abstract Tag Specification
 
-Pattern for constructing new Nitro Tags for library assembly.
+Pattern for constructing new Nitro Abstract Tags for library assembly.
 
 ## General Structure
 ```
@@ -8,18 +8,21 @@ Pattern for constructing new Nitro Tags for library assembly.
 +----------------------------------------------+
 |                                              |
 |                                              |
-|     [+] <nitro-tag>                         |
+|     [+] <nitro-tag>                          |
 |      |                                       |   bin        = component specific executable utility files
-|      +------>[ ] bin                         |
-|      |                                       |   src        = part implementation code and libs live here
+|      |                                       |
+|      +------>[ ] bin                         |   tag        = sandbox tag and subtag templates (html)
+|      |                                       |   src        = tag implementation code and libs live here
 |      +------>[ ] docs                        |
-|      |                                       |   src/lib    = common js files across implementations
+|      |                                       |   src/lib    = shared js files across implementations
 |      +------>[+] src                         |
-|      |        |                              |   src/res    = common media/images for implementations
+|      |        |                              |   src/res    = shared media/images for implementations
 |      |        |                              |
-|      |        +------>[ ] lib                |   src/impl   = implementations supported by this componen
+|      |        +------>[ ] lib                |   src/impl   = implementations supported by this component
 |      |        |                              |
 |      |        +------>[ ] tag                |   build.json = config for building implementation version
+|      |        |        |                     |
+|      |        |        |____ tag.html        |
 |      |        |                              |
 |      |        +------>[+] impl               |   tag.json   = tag definition config for Nitro assembly
 |      |                 |                     |
