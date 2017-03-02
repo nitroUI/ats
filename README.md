@@ -1,6 +1,6 @@
-# Nitro Parts Template
+# Nitro Tag Definition Spec
 
-Pattern for constructing new Nitro Parts for library assembly.
+Pattern for constructing new Nitro Tags for library assembly.
 
 ## General Structure
 ```
@@ -8,7 +8,7 @@ Pattern for constructing new Nitro Parts for library assembly.
 +----------------------------------------------+
 |                                              |
 |                                              |
-|     [+] <nitro-part>                         |
+|     [+] <nitro-tag>                         |
 |      |                                       |   bin        = component specific executable utility files
 |      +------>[ ] bin                         |
 |      |                                       |   src        = part implementation code and libs live here
@@ -21,7 +21,7 @@ Pattern for constructing new Nitro Parts for library assembly.
 |      |        |                              |
 |      |        +------>[ ] tag                |   build.json = config for building implementation version
 |      |        |                              |
-|      |        +------>[+] impl               |   part.json  = part definition config for Nitro assembly
+|      |        +------>[+] impl               |   tag.json   = tag definition config for Nitro assembly
 |      |                 |                     |
 |      |                 +--->[+]<name>        |   impl/test  = all unit tests for specific implementation
 |      |                 |     |               |
@@ -43,7 +43,7 @@ Pattern for constructing new Nitro Parts for library assembly.
 |      |                                       |                can be deployed in a ui sandbox, to larger
 |      |                                       |                deployed library or to test suite
 |      |                                       |
-|      +------>[ ] part.json                   |   .nitro     = generated partid & semvar number
+|      +------>[ ] tag.json                    |   .nitro     = generated partid & semvar number
 |      |                                       |
 |      +------>[G] .nitro                      |
 |      |                                       |
