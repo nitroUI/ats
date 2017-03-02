@@ -9,7 +9,7 @@ Pattern for constructing new Nitro Parts for library assembly.
 |                                              |
 |                                              |
 |     [+] <nitro-part>                         |
-|      |                                       |   bin        = comopnent specific executable utility files
+|      |                                       |   bin        = component specific executable utility files
 |      +------>[ ] bin                         |
 |      |                                       |   src        = part implementation code and libs live here
 |      +------>[ ] docs                        |
