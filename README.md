@@ -1,4 +1,6 @@
-# Nitro Abstract Tag Specification
+# Nitro Abstract Part Specification
+
+A Part is a pre-compiled tag, when a part is compiled/published, it is packaged as a tag.
 
 Pattern for constructing new Nitro Abstract Tags for library assembly.
 
