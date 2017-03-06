@@ -1,0 +1,20 @@
+{
+  "file_structure" : {
+    dir  : { "name" : "root" , "type" : "root_dir", "var" : "self", "tpl" : "${root}", "sub" : [ "bin", "docs", "src", "res" ] },
+    dir  : { "name" : "bin",   "type" : "exec_dir", "sub"  : [] },
+    dir  : { "name" : "docs",  "sub"  : [] },
+    dir  : { "name" : "src",   "sub"  : [] },
+    dir  : { "name" : "res",   "sub"  : [ "zero", "${skin-name}" ] },
+    dir  : { "name" : "lib",   "sub"  : [] },  
+    dir  : { "name" : "tag",   "sub"  : [] },  
+    file : { "name" : "tag.html",     "type" : "html_file" }
+    dir  : { "name" : "impl",  "sub"  : [ "${impl-name}" ] },   
+    dir  : { "name" : "impl-name",    "type" : "template", "var" : "self", "tpl" : "${impl-name}", "sub" : [ "test", "build.json", "index.js" ] }, 
+    dir  : { "name" : "test",         "type" : "template", "tpl" : "${impl-name}/test"  }, 
+    dir  : { "name" : "index.js",     "type" : "template", "tpl" : "${impl-name}/test/index.js"  }, 
+    dir  : { "name" : "build.json",   "type" : "template", "tpl" : "${impl-name}/build.json"}, 
+    dir  : { "name" : "dist",         "type" : "generated",  "generated" : "true" },
+    file : { "name" : ".nitro",       "type" : "generated",  "generated" : "true" },
+    file : { "name" : "part.json",    "type" : "config_file" }
+  }
+}
