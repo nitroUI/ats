@@ -8,7 +8,7 @@ Pattern for constructing new Nitro Abstract Tags for library assembly.
 +----------------------------------------------+
 |                                              |
 |                                              |
-|     [+] <nitro-tag>                          |
+|     [+] <nitro-part>                         |
 |      |                                       |   bin        = component specific executable utility files
 |      |                                       |
 |      +------>[ ] bin                         |   tag        = sandbox tag and subtag templates (html)
@@ -24,7 +24,7 @@ Pattern for constructing new Nitro Abstract Tags for library assembly.
 |      |        |        |                     |
 |      |        |        |____ tag.html        |
 |      |        |                              |
-|      |        +------>[+] impl               |   tag.json   = tag definition config for Nitro assembly
+|      |        +------>[+] impl               |   part.json  = part definition config for Nitro assembly
 |      |                 |                     |
 |      |                 +--->[+]<name>        |   impl/test  = all unit tests for specific implementation
 |      |                 |     |               |
@@ -46,7 +46,7 @@ Pattern for constructing new Nitro Abstract Tags for library assembly.
 |      |                                       |                can be deployed in a ui sandbox, to larger
 |      |                                       |                deployed library or to test suite
 |      |                                       |
-|      +------>[ ] tag.json                    |   .nitro     = generated partid & semvar number
+|      +------>[ ] part.json                   |   .nitro     = generated partid & semvar number
 |      |                                       |
 |      +------>[G] .nitro                      |
 |      |                                       |
